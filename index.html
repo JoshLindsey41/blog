@@ -1,0 +1,67 @@
+<?php
+session_start();
+// store session data
+
+$_SESSION['views']=1;
+
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Josh Lindsey - Home</title>
+
+	<link rel="stylesheet" href="sample3.css" type="text/css" />
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+</head>
+
+<body>
+	
+	<div id="nav">
+	
+			<div class="header">
+				<p class="title"><a href="index.php">THE BLOG</a><p>
+			</div>
+			<div class="login">
+				<br><br>
+				<?php
+				if(isset($_Session['logged_in'])) {
+					echo $_Session['user']."<a href='logout.php'> (logout)</a>";
+				} else {
+					echo "<a href='login.php'>Log in here</a>";
+				}
+				?>
+			</div>
+			<ul class="nav">
+				<li class="spacer">&nbsp </li>
+				<li class="nav"><a class="nav" href="index.php">Home</a></li>
+				<li class="nav"><a class="nav" href="profile.php">Profile</a></li>
+				<li class="nav"><a class="nav" href="search.php">Search</a></li>
+				<li class="nav"><a class="nav" href="search.php">Topics</a></li>
+				<li class="nav"><a class="nav" href="localhost/www.josh-lindsey.com/index.php">Back to Site</a></li>
+			</ul>
+	
+	</div>
+	<div id="wrapper">
+		
+		<div id="right">
+			<?php include "last5.php"; ?>
+			<?php include "last5tech.php"; ?>
+			<?php include "last5current.php"; ?>
+		</div>
+		
+		<div id="left">
+			<?php include "content.php"; ?>
+			
+		</div>
+		
+		<div id="footer">
+		
+		</div>
+	</div>
+</body>
+
+</html>
