@@ -66,7 +66,7 @@ echo "<br><br>";
 			</tr>
 			<tr>
 				<td class="body1">Post Body</td>
-				<td class="body2"><textarea name="post_body" maxlength="20000"></textarea></td>
+				<td class="body2"><textarea class="wysiwyg" name="post_body" maxlength="20000"></textarea></td>
 			</tr>
 			<tr>
 				<td class="blog_post2"><input name="submit" type="submit" value="submit" /></td>

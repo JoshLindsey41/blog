@@ -13,9 +13,13 @@ $_SESSION['views']=1;
 	<link rel="stylesheet" href="sample3.css" type="text/css" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/wymeditor/jquery/jquery.js"></script>
+	<script src="js/wymeditor/wymeditor/jquery.wymeditor.js"></script>
 	<script>
 		$(document).ready(function(){
+		  console.log($('.wysiwyg'));
+		  $('.wysiwyg').wymeditor();
+		   console.log("there");
 		  $(".comment").click(function(){
 			$("p.comment").toggle();
 		  });
